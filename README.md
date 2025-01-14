@@ -1,6 +1,6 @@
 This is the repo of our work titled “Neural Codec Source Tracing: Toward Comprehensive Attribution in Open-Set Condition”, which was available on arxiv at https://arxiv.org/pdf/2501.06514.
 
-The ST-dataset can be found at https://zenodo.org/records/14631091.
+Due to platform restrictions on the size of zenodo repositories, we have divided the Codecfake dataset into two subsets as shown in the table below:
 
 | ST-Codecfake            | Description                                      | Link                                                                 |
 |-------------------------|--------------------------------------------------|----------------------------------------------------------------------|

@@ -8,4 +8,4 @@ Due to platform restrictions on the size of zenodo repositories, we have divided
 | open-set evaluation part| ID config, ID source, OOD config, OOD source, ALM| [https://zenodo.org/records/14631085](https://zenodo.org/records/14631085) |
 
 
-I will organize the code and upload it within two weeks.
+I will update readme within one week.

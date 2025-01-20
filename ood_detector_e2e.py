@@ -18,8 +18,9 @@ def init():
                         default='./models/try/')
     parser.add_argument("--gpu", type=str, help="GPU index", default="7")
     parser.add_argument("--ood_detector_name", type=str, default="msp",
-                        choices=['energy', 'nnguide', 'msp', 'maxlogit','NSD', 'vim', 'ssd', 'mahalanobis', 
-                                 'NSD', 'kl', 'knn', 'relation'])
+                        choices=['energy', 'msp', 'NSD',  'mahalanobis',  'knn'])
+    parser.add_argument("--condition", type=str, default="single7",
+                    choices=['single7','multi8','voc','diff_config','diff_source'])
     args = parser.parse_args()
 
     os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
@@ -42,8 +43,16 @@ def test_ood():
 
     # id are 0-6, ood7 if fake 7, ood 8 are fake 8-11, oodvoc are 19fake and ITWfake.
     evaldictid = torch.load('./save_feats/evaldict_id.pt')
-    evaldictood = torch.load('./save_feats/evaldict_ood7.pt')
-    
+    if args.condition == 'single7':
+        evaldictood = torch.load('./save_feats/evaldict_ood7.pt')
+    if args.condition == 'multi8':
+        evaldictood = torch.load('./save_feats/evaldict_ood8.pt')
+    if args.condition == 'voc':
+        evaldictood = torch.load('./save_feats/evaldict_oodvoc.pt')
+    if args.condition == 'diff_config':
+        evaldictood = torch.load('./save_feats/evaldict_ood_config.pt')
+    if args.condition == 'diff_source':
+        evaldictood = torch.load('./save_feats/evaldict_ood_source.pt')
     evaldict = {}
     evaldict["logits"] = torch.cat([evaldictid["logits"], evaldictood["logits"]], dim=0)
     evaldict["feas"] = torch.cat([evaldictid["feas"], evaldictood["feas"]], dim=0)

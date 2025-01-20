@@ -96,7 +96,7 @@ To change the source tracing model, please refer to config.py --model, choices=[
 
 #### ID close-set classification evaluation
 <p align="center">
-  <img src="figure/id_f1.png" width="300" height="100">
+  <img src="figure/ID_f1.png" width="300" height="100">
 </p>
 
 1. `python source_tracing_id.py `  

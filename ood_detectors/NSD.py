@@ -10,7 +10,7 @@ from copy import deepcopy
 
 
 def NSD_with_angle(feas_train, feas, min=False):
-    # 保持在GPU上使用 PyTorch 进行操作
+
     cos_similarity = torch.mm(feas, feas_train.T)
     
     if min:

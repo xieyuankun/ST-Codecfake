@@ -8,7 +8,6 @@ Due to platform restrictions on the size of zenodo repositories, we have divided
 | open-set evaluation part| ID config, ID source, OOD config, OOD source, ALM| [https://zenodo.org/records/14631085](https://zenodo.org/records/14631085) |
 
 
-I will organize the code and upload it within two weeks.
 
 ### 1. Data prepraring
 
@@ -131,7 +130,7 @@ Compute id f1-score by `result/result_id.txt`
 
 4. `python evaluate_id_unseenreal.py ` compute f1-score
 
-#### OOD evaluation
+#### OOD open-set evaluation
 <p align="center">
   <img src="figure/ood.png">
 </p>
@@ -160,20 +159,12 @@ Compute id f1-score by `result/result_id.txt`
 ##  Thanks
 NCSSD dataset
 ```
-@inproceedings{10.1145/3664647.3681697,
-  author = {Liu, Rui and Hu, Yifan and Ren, Yi and Yin, Xiang and Li, Haizhou},
-  title = {Generative Expressive Conversational Speech Synthesis},
-  year = {2024},
-  publisher = {Association for Computing Machinery},
-  address = {New York, NY, USA},
-  url = {https://doi.org/10.1145/3664647.3681697},
-  doi = {10.1145/3664647.3681697},
-  booktitle = {Proceedings of the 32nd ACM International Conference on Multimedia},
-  pages = {4187–4196},
-  numpages = {10},
-  keywords = {conversational speech synthesis (css), expressiveness, gpt, user-agent conversation},
-  location = {Melbourne VIC, Australia},
-  series = {MM '24}
+@inproceedings{liu2024generative,
+  title={Generative expressive conversational speech synthesis},
+  author={Liu, Rui and Hu, Yifan and Ren, Yi and Yin, Xiang and Li, Haizhou},
+  booktitle={Proceedings of the 32nd ACM International Conference on Multimedia},
+  pages={4187--4196},
+  year={2024}
 }
 ```
 

@@ -32,31 +32,6 @@ def init():
     return args
 
 
-def pad_dataset(wav):
-    waveform = wav.squeeze(0)
-    waveform_len = waveform.shape[0]
-    cut = 160000
-    if waveform_len >= cut:
-        waveform = waveform[:cut]
-        return waveform
-    # need to pad
-    num_repeats = int(cut / waveform_len) + 1
-    padded_waveform = torch.tile(waveform, (1, num_repeats))[:, :cut][0]
-    return padded_waveform
-
-
-def normalization(orign_data):
-    d_min = orign_data.min()
-    if d_min < 0:
-        orign_data += torch.abs(d_min)
-        d_min = orign_data.min()
-    d_max = orign_data.max()
-    distance = d_max - d_min
-    norm_data = (orign_data - d_min).true_divide(distance)
-    return norm_data
-
-
-
 def source_tracing_ALM(feat_model_path):
     # Load the model checkpoint
     checkpoint = torch.load(feat_model_path)

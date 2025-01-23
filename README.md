@@ -7,6 +7,7 @@ Due to platform restrictions on the size of zenodo repositories, we have divided
 | main part               | training, development, evaluation (ID & OOD)     | [https://zenodo.org/records/14631091](https://zenodo.org/records/14631091) |
 | open-set evaluation part| ID config, ID source, OOD config, OOD source, ALM| [https://zenodo.org/records/14631085](https://zenodo.org/records/14631085) |
 
+Pre-trained model can be downloaded from [google drive](https://drive.google.com/drive/folders/1Z-7VvMUyWlUDnmk_uLksIXFCagZBWdWQ?usp=sharing).
 
 
 ### 1. Data prepraring
@@ -71,7 +72,7 @@ Upon downloading the ST-Codecfake datasets, please arrange them in accordance wi
 │   │   └── speechgpt-gen
 │   │        └── *.wav (18 samples)
 │   │   └── valle
-│   │        └── *.wav (10000 samples)
+│   │        └── *.wav (4436 samples)
 
 ```
 Three unseen real dataset:

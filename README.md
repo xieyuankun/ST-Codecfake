@@ -71,7 +71,7 @@ Upon downloading the ST-Codecfake datasets, please arrange them in accordance wi
 │   │   └── speechgpt-gen
 │   │        └── *.wav (18 samples)
 │   │   └── valle
-│   │        └── *.wav (10000 samples)
+│   │        └── *.wav (4436 samples)
 
 ```
 Three unseen real dataset:

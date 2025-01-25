@@ -11,12 +11,7 @@ torch.multiprocessing.set_start_method('spawn', force=True)
 from rawaasist import *
 
 def init():
-    base_args = config.initParams()
-    parser = argparse.ArgumentParser("load model scores")
-
-    for arg in vars(base_args):
-        parser.add_argument(f'--{arg}', default=getattr(base_args, arg))
-
+    parser = config.initParams()
     parser.add_argument('--model_folder', type=str, help="directory for pretrained model",
                         default='./models/try/')
 

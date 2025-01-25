@@ -67,5 +67,4 @@ def initParams():
                         help="Loss function to use for basic training (ce: Cross Entropy, bce: Binary Cross Entropy)")
     parser.add_argument('--continue_training', action='store_true', help="Flag to continue training from a checkpoint")
 
-    args = parser.parse_args()
-    return args
+    return parser

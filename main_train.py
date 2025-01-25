@@ -22,8 +22,8 @@ import config
 
 def initParams():
 
-    args = config.initParams()
-
+    parser = config.initParams()
+    args = parser.parse_args()
     os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu
 
     # Set seeds
